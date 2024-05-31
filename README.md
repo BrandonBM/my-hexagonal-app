@@ -17,20 +17,24 @@
     │   │   │               ├── domain
     │   │   │               │   ├── model
     │   │   │               │   │   └── MyEntity.java
-    │   │   │               │   ├── repository
-    │   │   │               │   │   └── MyRepository.java
+    │   │   │               │   ├── port
+    │   │   │               │   │   └── MyRepositoryPort.java
     │   │   │               │   └── service
     │   │   │               │       └── MyDomainService.java
     │   │   │               └── infrastructure
     │   │   │                   ├── adapter
+    │   │   │                   │   ├── repository
+    │   │   │                   │   │   └── MyRepository.java
     │   │   │                   │   ├── out
     │   │   │                   │   │   └── MyRepositoryAdapter.java
     │   │   │                   │   └── in
     │   │   │                   │       └── MyController.java
-    │   │   │                   └── config
-    │   │   │                       └── MyAppConfig.java
+    │   │   │                   ├── config
+    │   │   │                   │   └── MyAppConfig.java
+    │   │   │                   └── deploy
+    │   │   │                       └── deploymentConfig.yaml
     │   │   └── resources
-    │   │       └── application.yml
+    │   │       └── application.properties
     └── build.gradle
 
 # Descripción de Archivos
@@ -40,9 +44,10 @@
 - ***Port In (MyUseCase.java)***: Interfaces que definen los casos de uso de la aplicación. Son utilizados por la capa de infraestructura para interactuar con la lógica de aplicación.
 ## Capa de Dominio (domain)
 - ***Model (MyEntity.java)***: Contiene las entidades del dominio, que representan los objetos y sus relaciones en el negocio.
-- ***Repository (MyRepository.java)***: Interfaces para la persistencia de las entidades del dominio.
+- ***RepositoryPort (MyRepository.java)***: Interfaces para la persistencia de las entidades del dominio.
 - ***Service (MyDomainService.java)***: Contiene la lógica de negocio pura, independiente de la infraestructura.
 ## Capa de Infraestructura (infrastructure)
+- ***Adapter repository (MyRepository.java)***: Interfaces de repositorio con implementaciones concretas de la base de datos u otros sistemas externos.
 - ***Adapter Out (MyRepositoryAdapter.java)***: Implementaciones de las interfaces de repositorio que interactúan con la base de datos u otros sistemas externos.
 - ***Adapter In (MyController.java)***: Controladores REST que exponen la API de la aplicación.
 - ***Config (MyAppConfig.java)***: Archivos de configuración, incluyendo configuraciones de Spring Boot.

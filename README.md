@@ -47,4 +47,4 @@
 **Adapter In (MyController.java)**: Controladores REST que exponen la API de la aplicación.
 **Config (MyAppConfig.java)**: Archivos de configuración, incluyendo configuraciones de Spring Boot.
 
-# Este ejemplo muestra una estructura básica de una aplicación con arquitectura hexagonal utilizando Spring Boot. Cada capa tiene una responsabilidad clara y está desacoplada de las demás, permitiendo flexibilidad y facilidad de mantenimiento.
+### Este ejemplo muestra una estructura básica de una aplicación con arquitectura hexagonal utilizando Spring Boot. Cada capa tiene una responsabilidad clara y está desacoplada de las demás, permitiendo flexibilidad y facilidad de mantenimiento.

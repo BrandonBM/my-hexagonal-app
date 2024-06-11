@@ -8,12 +8,12 @@
     │   │   │           └── myhexagonalapp
     │   │   │               ├── application
     │   │   │               │   ├── service
-    │   │   │               │   │   └── MyService.java
+    │   │   │               │   │   └── MyServiceAdapter.java
     │   │   │               │   ├── dto
     │   │   │               │   │   └── MyDto.java
     │   │   │               │   └── port
     │   │   │               │       └── in
-    │   │   │               │           └── MyUseCase.java
+    │   │   │               │           └── MyUseCasePort.java
     │   │   │               ├── domain
     │   │   │               │   ├── model
     │   │   │               │   │   └── MyEntity.java
@@ -39,9 +39,9 @@
 
 # Descripción de Archivos
 ## Capa de Aplicación (application)
-- ***Service (MyService.java)***: Contiene la lógica de aplicación, orquesta los casos de uso y maneja los flujos de la aplicación.
+- ***Service (MyServiceAdapter.java)***: Contiene la lógica de aplicación, orquesta los casos de uso y maneja los flujos de la aplicación.
 - ***DTO (MyDto.java)***: Objetos de transferencia de datos utilizados para mover datos entre la capa de aplicación y otras capas.
-- ***Port In (MyUseCase.java)***: Interfaces que definen los casos de uso de la aplicación. Son utilizados por la capa de infraestructura para interactuar con la lógica de aplicación.
+- ***Port In (MyUseCasePort.java)***: Interfaces que definen los casos de uso de la aplicación. Son utilizados por la capa de infraestructura para interactuar con la lógica de aplicación.
 ## Capa de Dominio (domain)
 - ***Model (MyEntity.java)***: Contiene las entidades del dominio, que representan los objetos y sus relaciones en el negocio.
 - ***RepositoryPort (MyRepository.java)***: Interfaces para la persistencia de las entidades del dominio.

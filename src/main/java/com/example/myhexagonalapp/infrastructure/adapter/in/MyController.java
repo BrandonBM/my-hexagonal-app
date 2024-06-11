@@ -1,7 +1,7 @@
 package com.example.myhexagonalapp.infrastructure.adapter.in;
 
 import com.example.myhexagonalapp.application.dto.MyDto;
-import com.example.myhexagonalapp.application.port.in.MyUseCase;
+import com.example.myhexagonalapp.application.port.in.MyUseCasePort;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/myentity")
 public class MyController {
 
-    private final MyUseCase myUseCase;
+    private final MyUseCasePort myUseCase;
 
     @Autowired
-    public MyController(MyUseCase myUseCase) {
+    public MyController(MyUseCasePort myUseCase) {
         this.myUseCase = myUseCase;
     }
 
